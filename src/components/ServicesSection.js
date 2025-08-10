@@ -1,5 +1,4 @@
 import React from "react";
-import image2 from "../assets/image-2.png";
 
 export const ServicesSection = () => {
   return (
@@ -7,7 +6,7 @@ export const ServicesSection = () => {
       <img
         className="h-[414px] relative w-[414px] object-cover"
         alt="Web and Mobile App Development illustration"
-        src={image2}
+        src={`${process.env.PUBLIC_URL}/images/image-2.png`}
       />
 
       <div className="flex flex-col w-[542px] items-start gap-5 relative">

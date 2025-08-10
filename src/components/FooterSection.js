@@ -1,7 +1,4 @@
 import React from "react";
-import image from "../assets/image.svg";
-import line6 from "../assets/line-6.svg";
-import line7 from "../assets/line-7.svg";
 
 export const FooterSection = () => {
   const technologies = ["Reactjs", "Gatsby", "Nextjs", "Nodejs"];
@@ -18,7 +15,7 @@ export const FooterSection = () => {
     <footer className="flex flex-col w-[1440px] items-center gap-10 pt-10 pb-5 px-20 absolute top-[2319px] left-0 bg-indigo-600">
       <div className="flex items-start justify-between relative self-stretch w-full flex-[0_0_auto]">
         <div className="flex flex-col w-[413px] items-start gap-5 relative">
-          <img className="relative flex-[0_0_auto]" alt="Logo" src={image} />
+          <img className="relative flex-[0_0_auto]" alt="Logo" src={`${process.env.PUBLIC_URL}/images/image.svg`} />
 
           <p className="relative self-stretch [font-family:'Lato-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal]">
             Your goal is our target. Not anything in between. We use online
@@ -78,7 +75,7 @@ export const FooterSection = () => {
         <img
           className="self-stretch w-full h-px mt-[-1.00px] relative object-cover"
           alt="Divider line"
-          src={line6}
+          src={`${process.env.PUBLIC_URL}/images/line-6.svg`}
         />
 
         <nav
@@ -98,7 +95,7 @@ export const FooterSection = () => {
                 <img
                   className="w-px h-4 relative object-cover"
                   alt="Separator"
-                  src={line7}
+                  src={`${process.env.PUBLIC_URL}/images/line-7.svg`}
                 />
               )}
             </React.Fragment>

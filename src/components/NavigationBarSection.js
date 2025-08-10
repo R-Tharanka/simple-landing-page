@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/logo.svg";
 
 export const NavigationBarSection = () => {
   const navigationItems = [
@@ -23,7 +22,7 @@ export const NavigationBarSection = () => {
         <img
           className="relative flex-[0_0_auto]"
           alt="AT Digital Logo"
-          src={logo}
+          src={`${process.env.PUBLIC_URL}/images/logo.png`}
         />
       </a>
 

@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "../images/image-1.png";
 
 export const AboutUsSection = () => {
   return (
@@ -33,7 +32,7 @@ export const AboutUsSection = () => {
       <img
         className="h-[416px] relative w-[414px] object-cover"
         alt="Digital strategy consulting illustration showing analytics and business growth"
-        src={image1}
+        src={`${process.env.PUBLIC_URL}/images/image-1.png`}
       />
     </section>
   );

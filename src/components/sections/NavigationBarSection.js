@@ -22,7 +22,7 @@ export const NavigationBarSection = () => {
         <img
           className="relative flex-[0_0_auto]"
           alt="AT Digital Logo"
-          src="/images/logo.svg"
+          src="/images/logo.png"
         />
       </a>
 

@@ -1,9 +1,4 @@
 import React, { useState } from "react";
-import vector2 from "../assets/vector-2.svg";
-import vector3 from "../assets/vector-3.svg";
-import vector4 from "../assets/vector-4.svg";
-import vector5 from "../assets/vector-5.svg";
-import vector from "../assets/vector.svg";
 
 export const FrequentlyAskedQuestionsSection = () => {
   const [expandedItems, setExpandedItems] = useState([0]);
@@ -68,7 +63,7 @@ export const FrequentlyAskedQuestionsSection = () => {
                       <img
                         className="absolute w-4 h-0.5 -top-px -left-px"
                         alt=""
-                        src={vector}
+                        src={`${process.env.PUBLIC_URL}/images/vector.svg`}
                         role="presentation"
                       />
                     </div>
@@ -77,13 +72,13 @@ export const FrequentlyAskedQuestionsSection = () => {
                       <img
                         className="absolute w-0.5 h-4 top-0 left-[7px]"
                         alt=""
-                        src={faq.id === 1 ? vector2 : vector4}
+                        src={`${process.env.PUBLIC_URL}/images/${faq.id === 1 ? 'vector-2.svg' : 'vector-4.svg'}`}
                         role="presentation"
                       />
                       <img
                         className="absolute w-4 h-0.5 top-[7px] left-0"
                         alt=""
-                        src={faq.id === 1 ? vector3 : vector5}
+                        src={`${process.env.PUBLIC_URL}/images/${faq.id === 1 ? 'vector-3.svg' : 'vector-5.svg'}`}
                         role="presentation"
                       />
                     </div>
