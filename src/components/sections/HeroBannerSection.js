@@ -13,9 +13,9 @@ export const HeroBannerSection = () => {
         {/* Background Image - Full Width */}
         <img src={heroimg} alt="Hero Background" className="w-full h-full bg-cover bg-center bg-no-repeat z-0 object-contain" />
 
-        {/* Content Container - Positioned at Bottom Left on md+ screens, Below image on smaller screens */}
-        <div className="md:absolute md:bottom-8 lg:bottom-16 left-0 z-10 w-full px-4 md:px-8 lg:px-16 py-4 md:py-0">
-          <div className="max-w-[630px] flex flex-col items-start gap-4 sm:gap-5 pt-6 sm:pt-8 pb-8 sm:pb-10 px-8 sm:px-12 bg-gradient-to-r from-[rgba(77,202,121,0.9)] to-[rgba(28,189,221,0.9)] shadow-xl">
+        {/* Content Container - Positioned at Bottom Left on md+ screens, Full width on smaller screens */}
+        <div className="md:absolute md:bottom-8 lg:bottom-16 left-0 z-10 w-full md:px-8 lg:px-16 md:py-0">
+          <div className="w-full md:max-w-[630px] flex flex-col items-start gap-4 sm:gap-5 pt-6 sm:pt-8 pb-8 sm:pb-10 px-8 sm:px-12 bg-gradient-to-r from-[rgba(77,202,121,0.9)] to-[rgba(28,189,221,0.9)] shadow-xl">
             <h1 className="font-bold font-['Inter-Bold',Helvetica] text-white text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
               We Crush Your Competitors, Goals, And Sales Records - Without The B.s.
             </h1>

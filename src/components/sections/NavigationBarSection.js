@@ -35,7 +35,7 @@ export const NavigationBarSection = () => {
       >
         <div className="flex items-center justify-between">
           {/* Logo with proper public path reference */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 ml-4 sm:ml-0">
             <a
               href="/"
               className="block"
