@@ -14,15 +14,15 @@ export const Element = () => {
       <main className="flex flex-col w-full">
 
         <HeroBannerSection />
-        <section className="w-full py-16">
+        <section className="w-full pt-16">
           <ServicesSection />
         </section>
 
-        <section className="w-full py-16">
+        <section className="w-full pb-16">
           <AboutUsSection />
         </section>
 
-        <section className="w-full py-16">
+        <section className="w-full pb-16">
           <FrequentlyAskedQuestionsSection />
         </section>
       </main>
