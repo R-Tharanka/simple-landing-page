@@ -33,7 +33,7 @@ export const FrequentlyAskedQuestionsSection = () => {
   };
 
   return (
-    <section className="container mx-auto py-16" role="region" aria-labelledby="faq-heading">
+    <section className="container mx-auto py-16" aria-labelledby="faq-heading">
       <div className="flex flex-col items-center gap-7 px-4">
         <h2 
           id="faq-heading"

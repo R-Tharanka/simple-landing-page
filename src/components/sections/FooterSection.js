@@ -42,18 +42,19 @@ export const FooterSection = () => {
 
               <nav
                 className="flex flex-col gap-2"
-                role="navigation"
                 aria-label="Technologies"
               >
                 {technologies.map((tech, index) => (
-                  <a
+                  <button
                     key={index}
-                    href="#"
-                    className="font-medium text-white text-sm hover:opacity-80 transition-opacity"
-                    aria-label={`Learn more about ${tech}`}
+                    type="button"
+                    className="text-left font-medium text-white text-sm hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/60 rounded"
+                    aria-label={`Technology: ${tech}`}
+                    // Placeholder onClick – replace with real navigation or filtering logic
+                    onClick={() => { /* TODO: navigate to technology detail section */ }}
                   >
                     {tech}
-                  </a>
+                  </button>
                 ))}
               </nav>
             </div>
@@ -65,18 +66,18 @@ export const FooterSection = () => {
 
               <nav
                 className="flex flex-col gap-2"
-                role="navigation"
                 aria-label="Services"
               >
                 {services.map((service, index) => (
-                  <a
+                  <button
                     key={index}
-                    href="#"
-                    className="font-medium text-white text-sm hover:opacity-80 transition-opacity whitespace-pre-line"
-                    aria-label={`Learn more about our ${service.replace('\n', ' ')} service`}
+                    type="button"
+                    className="text-left font-medium text-white text-sm hover:opacity-80 transition-opacity whitespace-pre-line focus:outline-none focus:ring-2 focus:ring-white/60 rounded"
+                    aria-label={`Service: ${service.replace('\n', ' ')}`}
+                    onClick={() => { /* TODO: open service detail */ }}
                   >
                     {service}
-                  </a>
+                  </button>
                 ))}
               </nav>
             </div>
@@ -89,18 +90,18 @@ export const FooterSection = () => {
 
           <nav
             className="flex items-center justify-center gap-4"
-            role="navigation"
             aria-label="Legal"
           >
             {footerLinks.map((link, index) => (
               <React.Fragment key={index}>
-                <a
-                  href="#"
-                  className="font-medium text-white text-sm hover:opacity-80 transition-opacity"
+                <button
+                  type="button"
+                  className="font-medium text-white text-sm hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-white/60 rounded"
                   aria-label={link}
+                  onClick={() => { /* TODO: open modal or navigate to legal page */ }}
                 >
                   {link}
-                </a>
+                </button>
                 {index < footerLinks.length - 1 && (
                   <div className="w-px h-4 bg-white opacity-50" aria-hidden="true"></div>
                 )}
