@@ -41,7 +41,7 @@ export const NavigationBarSection = () => {
           </div>
           
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <button 
               type="button"
               className="text-white p-2 focus:outline-none" 
@@ -60,7 +60,7 @@ export const NavigationBarSection = () => {
           </div>
           
           {/* Desktop navigation */}
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <ul
               className="flex items-center space-x-8"
               role="menubar"
@@ -82,7 +82,7 @@ export const NavigationBarSection = () => {
         
         {/* Mobile navigation */}
         {isMenuOpen && (
-          <div className="md:hidden bg-indigo-700 mt-2">
+          <div className="sm:hidden bg-indigo-700 mt-2">
             <ul className="px-4 pt-2 pb-4 space-y-3">
               {navigationItems.map((item, index) => (
                 <li key={index} role="none">
