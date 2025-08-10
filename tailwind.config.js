@@ -5,9 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      screens: {
-        'xs': '400px', // Custom breakpoint at 400px
-      },
       colors: {
         "neutral-600": "var(--neutral-600)",
       },
@@ -15,6 +12,9 @@ module.exports = {
         "body-1": "var(--body-1-font-family)",
         "poppins-h3-poppins-27px-semibold":
           "var(--poppins-h3-poppins-27px-semibold-font-family)",
+      },
+      screens: {
+        'xs': {'max': '400px'},
       },
     },
   },

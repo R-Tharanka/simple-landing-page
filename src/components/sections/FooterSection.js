@@ -20,7 +20,7 @@ export const FooterSection = () => {
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main footer content with logo, description, and navigation links */}
-        <div className="flex flex-col xs:flex-row justify-between items-start">
+        <div className="flex flex-col md:flex-row justify-between items-start">
 
           <div>
             <div className="flex flex-col items-start gap-5 pt-10">
@@ -34,8 +34,8 @@ export const FooterSection = () => {
           </div>
           </div>
 
-          <div className="flex flex-col xs:grid xs:grid-cols-2 w-fit pt-10"> 
-            <div className="w-[200px] mb-6 xs:mb-0">
+          <div className="xs:flex xs:flex-col grid grid-cols-2 w-fit pt-10"> 
+            <div className="w-[200px] mb-6 sm:mb-0">
               <h3 className="font-semibold text-white text-xl pb-2">
                 Our Technologies
               </h3>
