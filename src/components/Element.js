@@ -9,30 +9,27 @@ import { ServicesSection } from "./sections/ServicesSection";
 export const Element = () => {
   return (
     <div className="flex flex-col items-center bg-white w-full min-h-screen">
-      <div className="w-full max-w-[1440px] flex flex-col">
-        <header className="w-full">
-          <NavigationBarSection />
-          <HeroBannerSection />
-        </header>
+      <NavigationBarSection />
 
-        <main className="flex flex-col w-full">
-          <section className="w-full py-16">
-            <ServicesSection />
-          </section>
+      <main className="flex flex-col w-full">
 
-          <section className="w-full py-16">
-            <AboutUsSection />
-          </section>
+        <HeroBannerSection />
+        <section className="w-full py-16">
+          <ServicesSection />
+        </section>
 
-          <section className="w-full py-16">
-            <FrequentlyAskedQuestionsSection />
-          </section>
-        </main>
+        <section className="w-full py-16">
+          <AboutUsSection />
+        </section>
 
-        <footer className="w-full">
-          <FooterSection />
-        </footer>
-      </div>
+        <section className="w-full py-16">
+          <FrequentlyAskedQuestionsSection />
+        </section>
+      </main>
+
+      <footer className="w-full">
+        <FooterSection />
+      </footer>
     </div>
   );
 };

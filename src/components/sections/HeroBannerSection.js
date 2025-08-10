@@ -4,12 +4,12 @@ import heroimg from '../../assets/images/hero-image.png';
 export const HeroBannerSection = () => {
   return (
     <section
-      className="relative w-full h-auto"
+      className="relative w-full h-auto pt-16"
       role="banner"
       aria-label="Hero banner section"
     >
       {/* Background Image - Full Width */}
-      <img src={heroimg} alt="Hero Background" className="absolute w-full h-full bg-cover bg-center bg-no-repeat z-0 object-contain" />
+      <img src={heroimg} alt="Hero Background" className=" w-full h-full bg-cover bg-center bg-no-repeat z-0 object-contain" />
 
       {/* Content Container - Positioned at Bottom Left */}
       <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-0 z-10 w-full px-4 md:px-8 lg:px-16">

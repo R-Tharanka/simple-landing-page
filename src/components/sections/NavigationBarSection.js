@@ -24,7 +24,7 @@ export const NavigationBarSection = () => {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="flex items-center justify-between px-4 lg:px-20">
+        <div className="flex items-center justify-between px-4">
           {/* Logo with proper public path reference */}
           <div className="flex-shrink-0">
             <a
