@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Simple Landing Page (React + Tailwind CSS)
 
-## Available Scripts
+A responsive marketing/agency style landing page built with React 19 and Tailwind CSS 3. Includes a hero banner, services highlight, about section, FAQ accordion, and footer — structured as accessible, composable components.
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Responsive layout (mobile‑first) using Tailwind utility classes.
+- Hero banner with marketing headline and CTA.
+- Services section with media + content layout.
+- About Us section (component scaffold present).
+- FAQ accordion with accessible toggle buttons (ARIA attributes, keyboard friendly state).
+- Reusable Card / Element component primitives (see `src/components`).
+- Semantic HTML + basic accessibility considerations (landmarks, aria-labels, roles, focus states preserved via native elements).
+- Clean component folder structure for easy extension.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠 Tech Stack
 
-### `npm test`
+- React 19
+- Create React App (react-scripts 5)
+- Tailwind CSS 3 + PostCSS + Autoprefixer
+- Optional animation utilities: `tailwindcss-animate`
+- Testing libraries: `@testing-library/react`, `@testing-library/jest-dom`, `@testing-library/user-event`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📁 Project Structure
 
-### `npm run build`
+```
+public/
+	index.html            # HTML template
+src/
+	index.js              # Entry point
+	App.js                # Root layout / section composition
+	assets/images/        # Image assets (hero, illustrations, logo)
+	components/
+		Card.js             # Reusable card
+		Element.js          # (Utility / styling element)
+		sections/           # Page sections
+			HeroBannerSection.js
+			ServicesSection.js
+			AboutUsSection.js
+			FrequentlyAskedQuestionsSection.js
+			NavigationBarSection.js
+			FooterSection.js
+tailwind.config.js      # Tailwind configuration
+postcss.config.js       # PostCSS pipeline
+package.json
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Prerequisites:
+- Node.js >= 16 (CRA 5 is compatible; 18+ recommended)
+- npm (bundled with Node) or Yarn (optional)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies:
 
-### `npm run eject`
+```powershell
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```powershell
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Then open http://localhost:3000 in your browser. Hot reloading is enabled.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Create a production build:
 
-## Learn More
+```powershell
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run tests (watch mode):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```powershell
+npm test
+```
 
-### Code Splitting
+Optionally eject (NOT recommended unless you need full config control):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```powershell
+npm run eject
+```
 
-### Analyzing the Bundle Size
+## 🧩 Customization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Tailwind theme: edit `tailwind.config.js` (extend colors, spacing, fonts).
+- Global styles: `src/index.css` & `src/App.css`.
+- Add new sections: create a component in `src/components/sections` and import it in `App.js`.
+- Images: drop into `src/assets/images` and import with relative path.
 
-### Making a Progressive Web App
+## ♿ Accessibility Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- FAQ uses buttons with `aria-expanded` and `aria-controls` for screen reader clarity.
+- Sections use semantic elements (`section`, `header`, `footer`) and roles where extra clarity is helpful.
+- Ensure new interactive elements remain reachable (native elements or add proper keyboard handlers).
 
-### Advanced Configuration
+## 🔍 Potential Improvements / Roadmap
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Navigation bar active link highlighting + smooth scroll.
+- Expand FAQ answers with real content & add animation.
+- Dark mode toggle via Tailwind class strategy.
+- Add SEO metadata (Open Graph, meta description) in `public/index.html`.
+- Convert repeated button styles into a shared component.
+- Add unit tests for the FAQ toggle logic.
 
-### Deployment
+## ✅ Testing Strategy (Suggested)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Basic examples you can add in `src/__tests__/`:
+- Render Hero and assert CTA button is present.
+- FAQ expand/collapse toggles `aria-expanded` state.
 
-### `npm run build` fails to minify
+## 🧪 Scripts Summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Script | Purpose |
+| ------ | ------- |
+| `npm start` | Run dev server (port 3000) |
+| `npm test` | Jest watch mode via react-scripts |
+| `npm run build` | Production build to `build/` |
+| `npm run eject` | Copy config locally (irreversible) |
+
+## 📦 Deployment
+
+After `npm run build`, deploy contents of `build/` to any static host (Netlify, Vercel, GitHub Pages, S3 + CloudFront, etc.).
+
+## 🤝 Contributing
+
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feat/your-feature`
+3. Commit changes: `git commit -m "feat: add your feature"`
+4. Push: `git push origin feat/your-feature`
+5. Open a Pull Request
+
+## 📜 License
+
+Add a LICENSE file (MIT, Apache-2.0, etc.) if you intend to open source. (Currently unspecified.)
+
+## 🙋 FAQ (Project)
+
+Q: Why React instead of plain HTML/CSS?  
+A: Componentization & future scalability (adding logic, state, integration tests) while keeping DX high.
+
+Q: Can I swap Tailwind for another CSS framework?  
+A: Yes—remove Tailwind deps, update PostCSS pipeline, and replace utility classes with your framework or custom CSS modules.
+
+---
+
+Feel free to tailor further. Happy building!
+
