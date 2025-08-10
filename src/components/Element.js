@@ -8,28 +8,30 @@ import { ServicesSection } from "./sections/ServicesSection";
 
 export const Element = () => {
   return (
-    <div className="bg-white grid justify-items-center [align-items:start] w-screen">
-      <div className="bg-white w-[1440px] h-[2585px] relative">
-        <div className="absolute w-[1440px] h-[777px] top-0 left-0">
+    <div className="flex flex-col items-center bg-white w-full min-h-screen">
+      <div className="w-full max-w-[1440px] flex flex-col">
+        <header className="w-full">
           <NavigationBarSection />
           <HeroBannerSection />
-        </div>
+        </header>
 
-        <div className="absolute w-[422px] h-[195px] top-[777px] left-[74px]">
-          <ServicesSection />
-        </div>
+        <main className="flex flex-col w-full">
+          <section className="w-full py-16">
+            <ServicesSection />
+          </section>
 
-        <div className="absolute w-[422px] h-[195px] top-[1032px] left-[74px]">
-          <AboutUsSection />
-        </div>
+          <section className="w-full py-16">
+            <AboutUsSection />
+          </section>
 
-        <div className="absolute w-[337px] h-[155px] top-[1287px] left-[117px]">
-          <FrequentlyAskedQuestionsSection />
-        </div>
+          <section className="w-full py-16">
+            <FrequentlyAskedQuestionsSection />
+          </section>
+        </main>
 
-        <div className="absolute w-[1440px] h-[918px] top-[1667px] left-0">
+        <footer className="w-full">
           <FooterSection />
-        </div>
+        </footer>
       </div>
     </div>
   );

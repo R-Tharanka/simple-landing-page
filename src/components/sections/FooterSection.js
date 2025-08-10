@@ -12,87 +12,89 @@ export const FooterSection = () => {
   const footerLinks = ["Privacy Policy", "Terms & Conditions"];
 
   return (
-    <footer className="flex flex-col w-[1440px] items-center gap-10 pt-10 pb-5 px-20 absolute top-[2319px] left-0 bg-indigo-600">
-      <div className="flex items-start justify-between relative self-stretch w-full flex-[0_0_auto]">
-        <div className="flex flex-col w-[413px] items-start gap-5 relative">
-          <img className="relative flex-[0_0_auto]" alt="Logo" src="/images/logo.svg" />
+    <footer id="contact" className="w-full bg-indigo-600 py-10">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between gap-10">
+          <div className="flex flex-col items-start gap-5 max-w-md">
+            <img className="h-auto" alt="Logo" src="/images/logo.svg" />
 
-          <p className="relative self-stretch [font-family:'Lato-Regular',Helvetica] font-normal text-white text-base tracking-[0] leading-[normal]">
-            Your goal is our target. Not anything in between. We use online
-            marketing platforms and tools to achieve single objective - your
-            business results.
-          </p>
-        </div>
-
-        <div className="inline-flex items-start gap-32 relative flex-[0_0_auto]">
-          <div className="flex flex-col w-[197px] items-start gap-3 relative">
-            <h3 className="relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[21px] tracking-[0] leading-[normal] whitespace-nowrap">
-              Our Technologies
-            </h3>
-
-            <nav
-              className="inline-flex flex-col items-start gap-3 relative flex-[0_0_auto]"
-              role="navigation"
-              aria-label="Technologies"
-            >
-              {technologies.map((tech, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="relative w-fit mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[normal] hover:opacity-80 transition-opacity"
-                >
-                  {tech}
-                </a>
-              ))}
-            </nav>
+            <p className="font-['Lato-Regular',Helvetica] text-white text-base leading-relaxed">
+              Your goal is our target. Not anything in between. We use online
+              marketing platforms and tools to achieve single objective - your
+              business results.
+            </p>
           </div>
 
-          <div className="flex flex-col w-[197px] items-start gap-3 relative">
-            <h3 className="relative w-fit mt-[-1.00px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white text-[21px] tracking-[0] leading-[normal] whitespace-nowrap">
-              Our Services
-            </h3>
+          <div className="flex flex-wrap gap-8 md:gap-16 lg:gap-32">
+            <div className="flex flex-col gap-3 min-w-[160px]">
+              <h3 className="font-semibold text-white text-xl">
+                Our Technologies
+              </h3>
 
-            <nav
-              className="flex flex-col items-start gap-3 relative self-stretch w-full flex-[0_0_auto]"
-              role="navigation"
-              aria-label="Services"
-            >
-              {services.map((service, index) => (
-                <a
-                  key={index}
-                  href="#"
-                  className="relative self-stretch mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[normal] hover:opacity-80 transition-opacity"
-                >
-                  {service}
-                </a>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col w-[630px] items-center gap-2 relative flex-[0_0_auto]">
-        <div className="self-stretch w-full h-px mt-[-1.00px] relative bg-white opacity-50"></div>
-
-        <nav
-          className="inline-flex items-center justify-center gap-4 relative flex-[0_0_auto]"
-          role="navigation"
-          aria-label="Legal"
-        >
-          {footerLinks.map((link, index) => (
-            <React.Fragment key={index}>
-              <a
-                href="#"
-                className="relative w-fit mt-[-1.00px] [font-family:'Inter-Medium',Helvetica] font-medium text-white text-sm tracking-[0] leading-[normal] hover:opacity-80 transition-opacity"
+              <nav
+                className="flex flex-col gap-3"
+                role="navigation"
+                aria-label="Technologies"
               >
-                {link}
-              </a>
-              {index < footerLinks.length - 1 && (
-                <div className="w-px h-4 relative bg-white opacity-50"></div>
-              )}
-            </React.Fragment>
-          ))}
-        </nav>
+                {technologies.map((tech, index) => (
+                  <a
+                    key={index}
+                    href="#"
+                    className="font-medium text-white text-sm hover:opacity-80 transition-opacity"
+                  >
+                    {tech}
+                  </a>
+                ))}
+              </nav>
+            </div>
+
+            <div className="flex flex-col gap-3 min-w-[160px]">
+              <h3 className="font-semibold text-white text-xl">
+                Our Services
+              </h3>
+
+              <nav
+                className="flex flex-col gap-3"
+                role="navigation"
+                aria-label="Services"
+              >
+                {services.map((service, index) => (
+                  <a
+                    key={index}
+                    href="#"
+                    className="font-medium text-white text-sm hover:opacity-80 transition-opacity"
+                  >
+                    {service}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-4 mt-10">
+          <div className="w-full max-w-[630px] h-px bg-white opacity-50"></div>
+
+          <nav
+            className="flex items-center justify-center gap-4"
+            role="navigation"
+            aria-label="Legal"
+          >
+            {footerLinks.map((link, index) => (
+              <React.Fragment key={index}>
+                <a
+                  href="#"
+                  className="font-medium text-white text-sm hover:opacity-80 transition-opacity"
+                >
+                  {link}
+                </a>
+                {index < footerLinks.length - 1 && (
+                  <div className="w-px h-4 bg-white opacity-50"></div>
+                )}
+              </React.Fragment>
+            ))}
+          </nav>
+        </div>
       </div>
     </footer>
   );
