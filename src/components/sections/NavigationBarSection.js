@@ -2,8 +2,17 @@ import React, { useState } from "react";
 import logo from '../../assets/images/logo.png';
 
 export const NavigationBarSection = () => {
-  // Navigation items with proper structure
-  const navigationItems = [
+  // Mobile navigation items (including HOME)
+  const mobileNavigationItems = [
+    { label: "HOME", href: "/" },
+    { label: "SERVICES", href: "#services" },
+    { label: "ABOUT US", href: "#about" },
+    { label: "CONTACT US", href: "#contact" },
+    { label: "CAREERS", href: "#careers" },
+  ];
+  
+  // Desktop navigation items (excluding HOME)
+  const desktopNavigationItems = [
     { label: "SERVICES", href: "#services" },
     { label: "ABOUT US", href: "#about" },
     { label: "CONTACT US", href: "#contact" },
@@ -65,7 +74,7 @@ export const NavigationBarSection = () => {
               className="flex items-center space-x-8"
               role="menubar"
             >
-              {navigationItems.map((item, index) => (
+              {desktopNavigationItems.map((item, index) => (
                 <li key={index} role="none" className="inline-block">
                   <a
                     href={item.href}
@@ -79,27 +88,39 @@ export const NavigationBarSection = () => {
             </ul>
           </div>
         </div>
-        
-        {/* Mobile navigation */}
-        {isMenuOpen && (
-          <div className="sm:hidden bg-indigo-700 mt-2">
-            <ul className="px-4 pt-2 pb-4 space-y-3">
-              {navigationItems.map((item, index) => (
-                <li key={index} role="none">
-                  <a
-                    href={item.href}
-                    className="block text-white font-medium hover:bg-indigo-800 rounded px-3 py-2 text-base"
-                    role="menuitem"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </nav>
+      
+      {/* Full screen mobile navigation */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white z-50 sm:hidden">
+          <div className="flex justify-end p-6">
+            <button
+              type="button"
+              className="text-black focus:outline-none"
+              onClick={toggleMenu}
+              aria-label="Close navigation menu"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <ul className="flex flex-col px-6 space-y-6 mt-4">
+            {mobileNavigationItems.map((item, index) => (
+              <li key={index} role="none">
+                <a
+                  href={item.href}
+                  className="block text-black font-medium text-lg"
+                  role="menuitem"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
